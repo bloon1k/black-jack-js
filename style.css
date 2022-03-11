@@ -1,0 +1,478 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: cornsilk;
+  background-image: url("assets/table-bg.jpg");
+  background-size: cover;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+.hidden {
+  display: none !important;
+}
+.invisible {
+  visibility: hidden !important;
+}
+a {
+  color: lightblue;
+  text-decoration: none;
+}
+
+/* Move cards */
+
+.move-player-card {
+  transition: .7s all;
+}
+.move-dealer-card {
+  transition: .7s all;
+}
+.move-player-card3 {
+  transition: .7s all;
+}
+.move-player-card4 {
+  transition: .7s all;
+}
+.move-player-card5 {
+  transition: .7s all;
+}
+
+.move-dealer-card3 {
+  transition: .7s all;
+}
+.move-dealer-card4 {
+  transition: .7s all;
+}
+.move-dealer-card5 {
+  transition: .7s all;
+}
+
+
+.game__small-txt {
+  font-size: 10px;
+}
+.game__menu {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.game__logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.game__menu-text {
+  color: #FFF;
+}
+.game__logo {
+  width: 297px;
+  height: 196px;
+}
+.game__start-btn {
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  border: 5px solid #C0D9C1;
+  background-color: #4D8457;
+  color: #C0D9C1;
+}
+
+
+
+
+
+.game__content {
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Timer / Dealer cards / Nothing */
+.game__dealer-part {
+  height: 33.3vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.game__timer {
+  width: 33.3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.game__dealer-cards {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.game__dealer-card-wrapper {
+
+}
+.game__dealer-card1 {
+  position: absolute;
+  top: 15%;
+  left: 45%;
+  height: 16.5vh;
+  width: 11vh;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: .3s all;
+}
+.game__dealer-card2 {
+  position: absolute;
+  top: 12%;
+  left: 46.5%;
+  height: 16.5vh;
+  width: 11vh;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: .3s all;
+}
+.game__dealer-card3 {
+  position: absolute;
+  top: 9%;
+  left: 48%;
+  height: 16.5vh;
+  width: 11vh;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: .3s all;
+}
+.game__dealer-card4 {
+  position: absolute;
+  top: 6%;
+  left: 49.5%;
+  height: 16.5vh;
+  width: 11vh;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: .3s all;
+}
+.game__dealer-card5 {
+  position: absolute;
+  top: 3%;
+  left: 51%;
+  height: 16.5vh;
+  width: 11vh;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: .3s all;
+}
+.game__dealer-score {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #1D361B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s all;
+}
+.game__nothing {
+  width: 17.7vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Deck / Result / Current bet */
+
+.game__deck-result-bet {
+  height: 33.3vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.game__deck {
+  width: 33.3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.game__deck :first-child {
+  margin-left: 0 !important;
+  margin-top: 0 !important;
+}
+.game__deck-card {
+  position: absolute;
+  top: 42%;
+  left: 7%;
+  height: 16.5vh;
+  width: 11vh;
+}
+.game__result {
+  width: 33.3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.game__bet {
+  width: 33.3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Balance / Player cards / Bet */
+
+.game__player-part {
+  height: 33.3vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.game__buttons {
+  width: 33.3vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.game__buttons-wrapper {
+  max-width: 65%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  width: 8vw;
+  height: 5vh;
+  border-radius: 10px;
+  border: 2px solid rgb(255, 255, 255);
+  background-color: rgba(5, 0, 0, 0.35);
+  color: white;
+  
+}
+.btn:hover {
+  color: lightblue;
+}
+.game__split {
+  background-size: 70%;
+}
+.unavailable {
+  pointer-events: none;
+}
+.game__player-balance {
+  
+}
+.game__player-cards {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.game__player-card1 {
+  position: absolute;
+  top: 75%;
+  left: 45%;
+  height: 16.5vh;
+  width: 11vh;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: .3s all;
+}
+.game__player-card2 {
+  position: absolute;
+  top: 72%;
+  left: 46.5%;
+  height: 16.5vh;
+  width: 11vh;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: .3s all;
+}
+.game__player-card3 {
+  position: absolute;
+  top: 69%;
+  left: 48%;
+  height: 16.5vh;
+  width: 11vh;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: .3s all;
+}
+.game__player-card4 {
+  position: absolute;
+  top: 66%;
+  left: 49.5%;
+  height: 16.5vh;
+  width: 11vh;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: .3s all;
+}
+.game__player-card5 {
+  position: absolute;
+  top: 63%;
+  left: 51%;
+  height: 16.5vh;
+  width: 11vh;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: .3s all;
+}
+.game__player-card6 {
+  position: absolute;
+  top: 72%;
+  left: 46.5%;
+  height: 16.5vh;
+  width: 11vh;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: .3s all;
+}
+.game__player-card7 {
+  position: absolute;
+  top: 72%;
+  left: 61.5%;
+  height: 16.5vh;
+  width: 11vh;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: .3s all;
+}
+.game__player-card8 {
+  position: absolute;
+  top: 69%;
+  left: 63%;
+  height: 16.5vh;
+  width: 11vh;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: .3s all;
+}
+.game__player-card9 {
+  position: absolute;
+  top: 66%;
+  left: 64.5%;
+  height: 16.5vh;
+  width: 11vh;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: .3s all;
+}
+.game__player-card10 {
+  position: absolute;
+  top: 63%;
+  left: 66%;
+  height: 16.5vh;
+  width: 11vh;
+  border: 1px solid black;
+  border-radius: 5px;
+  transition: .3s all;
+}
+.game__player-score {
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #1D361B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  transition: .5s all;
+}
+.game__player-score2 {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #1D361B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  transition: .5s all;
+}
+
+@media (min-width: 1921px) {
+  .game__player-score {
+    width: 45px;
+    height: 45px;
+  }
+  .game__player-score2 {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.pointer {
+  position: absolute;
+  top: 50%;
+  left: 47%;
+  width: 50px;
+  height: 50px;
+  transition: .3s left;
+  animation-name: pointer;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes pointer {
+  0% {
+    top: 50%;
+  }
+  100% {
+    top: 55%;
+  }
+}
+
+
+.game__player-bet {
+  width: 17.7vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0%;
+  left: 0%;
+}
+.popup__body {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup__content {
+  width: 40vw;
+  height: 20vh;
+  border-radius: 15px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3vh;
+}
+.game__chance {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}

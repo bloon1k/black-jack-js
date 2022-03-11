@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <title>BlackJack</title>
+  <link rel="icon" type="image/x-icon" href="assets/logo.png">
+</head>
+
+<body>
+  <div class="game">
+    <div class="game__menu">
+      <div class="game__logo-wrapper">
+        <img class="game__logo" src="assets/logo.png" alt="Black Jack">
+        <p class="game__menu-text">By <a href="https://github.com/bloon1k" target="_blank">bloon1k</a><em
+            class="game__small-txt"> (Click for GitHub)</em></p>
+      </div>
+      <button class="btn game__start-btn">Start Game!</button>
+    </div>
+
+    <div class="game__content hidden">
+
+      <section class="game__dealer-part">
+
+        <div class="game__timer">
+          <span class="game__timer-text">60s left</span>
+          <span class="game__chance">60%</span>
+        </div>
+        <div class="currentHand">
+          <img src="assets/pointer.png" alt="pointer" class="pointer invisible">
+        </div>
+        <button class="btn next-hand invisible"
+          style="position: absolute; top: 46%; left: 44.8%; width: 9vw; height: 3vh; transition: .3s all">
+          SwitchHand
+        </button>
+
+        <div class="game__dealer-cards">
+          <div class="game__dealer-card-wrapper">
+            <img class="game__dealer-card1 invisible" src="assets/cards/back.png" alt="card">
+            <img class="game__dealer-card2 invisible" src="assets/cards/back.png" alt="card">
+            <img class="game__dealer-card3 invisible" src="assets/cards/back.png" alt="card">
+            <img class="game__dealer-card4 invisible" src="assets/cards/back.png" alt="card">
+            <img class="game__dealer-card5 invisible" src="assets/cards/back.png" alt="card">
+          </div>
+          <div class="game__dealer-score invisible">
+
+          </div>
+        </div>
+
+        <div class="game__nothing">
+          41 hours spent on the project <br> Chances of lose / Bid and balance system / Add winrate / Custom timer
+          <button class="btn game__start-btn2">Start Game!</button>
+          <button class="btn game__start-btn3">Get BlackJack</button>
+          <button class="btn game__start-btn4">Get Split</button>
+          <button class="btn pause">Settings</button>
+        </div>
+
+      </section>
+
+      <section class="game__deck-result-bet">
+
+        <div class="game__deck">
+
+        </div>
+
+        <div class="game__result">
+
+        </div>
+
+        <div class="game__bet">
+          <h2>Current bet: 1000</h2>
+        </div>
+
+      </section>
+
+      <section class="game__player-part">
+
+        <section class="game__buttons">
+          <div class="game__buttons-wrapper">
+            <button class="btn game__hold">
+              Stand
+            </button>
+            <button class="btn game__more">
+              Hit
+            </button>
+            <button class="btn game__split unavailable">
+              Split
+            </button>
+            <button class="btn game__double">
+              Double
+            </button>
+          </div>
+        </section>
+
+        <div class="game__player-cards">
+          <div class="game__player-score invisible">
+
+          </div>
+          <div class="game__player-score2">
+            21
+          </div>
+          <div class="game__player-card-wrapper">
+            <img class="game__player-card1 invisible" src="assets/cards/back.png" alt="card">
+            <img class="game__player-card2 invisible" src="assets/cards/back.png" alt="card">
+            <img class="game__player-card3 invisible" src="assets/cards/back.png" alt="card">
+            <img class="game__player-card4 invisible" src="assets/cards/back.png" alt="card">
+            <img class="game__player-card5 invisible" src="assets/cards/back.png" alt="card">
+
+            <img class="game__player-card6 invisible" src="assets/cards/back.png" alt="card">
+            <img class="game__player-card7 invisible" src="assets/cards/back.png" alt="card">
+            <img class="game__player-card8 invisible" src="assets/cards/back.png" alt="card">
+            <img class="game__player-card9 invisible" src="assets/cards/back.png" alt="card">
+            <img class="game__player-card10 invisible" src="assets/cards/back.png" alt="card">
+          </div>
+        </div>
+
+        <div class="game__player-bet">
+          <div class="game__player-balance">
+            <button class="btn game__add-balance">Add balance</button>
+          </div>
+        </div>
+
+      </section>
+      <div id="popup" class="hidden f">
+        <div class="popup__body">
+          <div class="popup__content">
+            <div class="popup__result">
+              Who's won today?
+            </div>
+            <div class="popup__controls">
+              <button class="btn popup__try-again">Try Again</button>
+              <button class="btn popup__lucky">Again, but luckier =)</button>
+              <button class="btn popup__menu">Return to menu</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
