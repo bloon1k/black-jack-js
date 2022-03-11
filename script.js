@@ -1,3 +1,5 @@
+// Chances of lose / Bid and balance system / Add winrate / Custom timer
+
 // Start game in different mods buttons
 const startBtn = document.getElementsByClassName("game__start-btn")[0];
 const startBtn2 = document.getElementsByClassName("game__start-btn2")[0];
