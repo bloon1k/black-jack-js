@@ -1,5 +1,7 @@
 # black-jack-js
 
-Pet Project / Card game
+** Pet Project / Card game **
 
-// Currently in development
+My first project made with vanilla HTML/CSS/JS
+
+It is still published to make it possible to compare a code quality with some further projects
